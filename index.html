@@ -10,7 +10,9 @@
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   body {
-    background: #0c0c0e;
+    background: radial-gradient(circle at top, rgba(232, 184, 75, 0.08), transparent 26%),
+                radial-gradient(circle at bottom right, rgba(232, 184, 75, 0.05), transparent 22%),
+                #0c0c0e;
     color: #e8e6e1;
     font-family: 'Source Sans 3', sans-serif;
     font-weight: 300;
@@ -18,6 +20,31 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  main {
+    width: 100%;
+    max-width: 560px;
+    padding: 64px 24px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .card {
+    width: 100%;
+    background: rgba(18, 18, 24, 0.92);
+    border: 1px solid rgba(232, 184, 75, 0.10);
+    border-radius: 28px;
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28), inset 0 0 0 1px rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(18px);
+    padding: 28px 26px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 30px 90px rgba(0, 0, 0, 0.36), inset 0 0 0 1px rgba(255, 255, 255, 0.05);
   }
 
   .banner {
@@ -57,36 +84,6 @@
     transition: border-color 0.2s;
   }
   .banner a:hover { border-color: #e8b84b; }
-
-
-  main {
-    width: 100%;
-    max-width: 520px;
-    padding: 64px 24px 80px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
-  }
-
-  .logo-block {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-  }
-  .logo-block img {
-    max-width: 280px;
-    width: 100%;
-    opacity: 0.95;
-  }
-
-  .divider {
-    width: 32px;
-    height: 1px;
-    background: #2e2e35;
-    align-self: center;
-  }
 
   /* Bio */
   .bio-block {
@@ -136,13 +133,19 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 12px;
+    padding: 18px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+  }
+  .section:first-of-type {
+    border-top: none;
+    padding-top: 12px;
   }
   .section-label {
     font-size: 10px;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: #484850;
+    color: #c8b781;
     font-family: 'Raleway', sans-serif;
     font-weight: 500;
     margin-bottom: 8px;
@@ -150,18 +153,23 @@
   .link-row {
     display: flex;
     align-items: center;
-    padding: 10px 0;
-    border-bottom: 1px solid #19191f;
+    padding: 14px 16px;
+    border-radius: 16px;
     text-decoration: none;
     color: #c8c6c0;
     font-size: 15px;
     font-weight: 300;
     letter-spacing: 0.01em;
-    transition: color 0.2s;
+    transition: color 0.2s, background 0.2s, transform 0.2s;
     gap: 10px;
+    background: rgba(255, 255, 255, 0.02);
   }
-  .link-row:last-child { border-bottom: none; }
-  .link-row:hover { color: #fff; }
+  .link-row:last-child { margin-bottom: 0; }
+  .link-row:hover {
+    color: #fff;
+    background: rgba(232, 184, 75, 0.08);
+    transform: translateX(1px);
+  }
   .link-row:hover .link-arrow { opacity: 1; transform: translateX(2px); }
   .link-arrow {
     margin-left: auto;
@@ -275,13 +283,13 @@
   </div>
 </div>
 
-  <div class="logo-block">
+  <div class="logo-block card">
     <img src="https://lumanesence.co.uk/text.png" alt="Lumanesence" />
   </div>
 
   <div class="divider"></div>
 
-  <div class="bio-block">
+  <div class="bio-block card">
     <p class="bio-greeting">hello, i'm thomas —<br>but please call me <span>luma</span> :)</p>
     <p class="bio-body">
       i'm a <strong>bus spotter</strong> and <strong>ai music enthusiast</strong> from <strong>greenhithe village, england</strong>
@@ -299,7 +307,7 @@
 
   <div class="divider"></div>
 
-  <div class="section">
+  <div class="section card">
     <p class="section-label">site links</p>
     <a class="link-row" href="https://ai.lumanesence.co.uk">
       <span class="link-dot"></span>#fuckaimusiclicensing<span class="link-arrow">→</span>
@@ -309,7 +317,7 @@
     </a>
   </div>
 
- <div class="section">
+ <div class="section card">
     <p class="section-label">telegram channels</p>
     <a class="link-row" href="https://t.me/OOCTechTok">
       <span class="link-dot"></span>out-of-context techtok community<span class="link-arrow">→</span>
@@ -320,7 +328,7 @@
 
 </div>
 
-  <div class="section">
+  <div class="section card">
     <p class="section-label">socials</p>
     <a class="link-row" href="https://beta.once.app/u/33bc5e86-713f-433b-92b0-b5112b45df56">
       <span class="link-dot"></span>once.app<span class="link-arrow">→</span>
@@ -339,7 +347,7 @@
     </a>
   </div>
 
-  <div class="section">
+  <div class="section card">
     <p class="section-label">contact</p>
     <a class="link-row" href="mailto:luma@lumanesence.co.uk">
       <span class="link-dot"></span>luma@lumanesence.co.uk<span class="link-arrow">→</span>
