@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About | Lumanesence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&family=Source+Sans+3:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #0c0c0e;
+    color: #e8e6e1;
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 300;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .banner {
+    width: 100%;
+    background: #1a1207;
+    border-bottom: 1px solid #3a2a0a;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 13px;
+    color: #c9971c;
+    letter-spacing: 0.02em;
+  }
+  .banner a {
+    color: #e8b84b;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(232,184,75,0.4);
+    padding-bottom: 1px;
+    transition: border-color 0.2s;
+  }
+  .banner a:hover { border-color: #e8b84b; }
+
+  main {
+    width: 100%;
+    max-width: 520px;
+    padding: 64px 24px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+  }
+
+  .logo-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .logo-block img {
+    max-width: 220px;
+    width: 100%;
+    opacity: 0.9;
+  }
+
+  .page-title {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #484850;
+  }
+
+  .divider {
+    width: 32px;
+    height: 1px;
+    background: #2e2e35;
+    align-self: center;
+  }
+
+  .bio-block {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .bio-greeting {
+    font-size: 22px;
+    font-weight: 300;
+    color: #e8e6e1;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+  }
+
+  .bio-greeting span {
+    color: #e8b84b;
+  }
+
+  .bio-body {
+    font-size: 15px;
+    color: #888;
+    line-height: 1.8;
+    font-weight: 300;
+  }
+
+  .bio-body strong {
+    color: #b0aead;
+    font-weight: 400;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 4px;
+  }
+
+  .tag {
+    font-family: 'Raleway', sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #555;
+    border: 1px solid #222;
+    padding: 5px 12px;
+    border-radius: 2px;
+  }
+
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #444;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .back-link:hover { color: #e8e6e1; }
+
+  footer {
+    margin-top: auto;
+    padding: 24px;
+    font-size: 12px;
+    color: #333;
+    letter-spacing: 0.04em;
+  }
+</style>
+</head>
+<body>
+
+<div class="banner">
+  <span>⚠</span>
+  This site will go dark <strong>June 1–5, 2026</strong> in recognition of Rec Room's shutdown.
+  <a href="https://lumanesence.co.uk/recroom.html">Learn more</a>
+</div>
+
+<main>
+
+  <div class="logo-block">
+    <a href="https://lumanesence.co.uk/index.html">
+      <img src="https://lumanesence.co.uk/text.png" alt="Lumanesence" />
+    </a>
+    <p class="page-title">about me</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="bio-block">
+    <p class="bio-greeting">hello, i'm thomas —<br>but please call me <span>luma</span> :)</p>
+    <p class="bio-body">
+      i'm a <strong>bus spotter</strong> and <strong>ai music enthusiast</strong> from <strong>greenhithe village, england</strong>
+      that likes i-win a bit too much... i study <strong>level 1 information technology</strong> at london south east colleges,
+      and make stupid websites in my free time. i also make some pretty odd sora videos with netamitv and others :)
+    </p>
+    <div class="tags">
+      <span class="tag">bus spotter</span>
+      <span class="tag">musician</span>
+      <span class="tag">web dev</span>
+      <span class="tag">greenhithe</span>
+      <span class="tag">sora videos</span>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <a class="back-link" href="https://lumanesence.co.uk/index.html">← home</a>
+
+</main>
+
+<footer>lumanesence.co.uk</footer>
+
+</body>
+</html>
