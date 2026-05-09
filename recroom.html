@@ -4,20 +4,42 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>why i'm going dark — lumanesence</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&family=Source+Sans+3:wght@300;400&display=swap" rel="stylesheet">
 <style>
+  @font-face {
+    font-family: 'Righteous';
+    src: url('righteous-regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   body {
     background: #0c0c0e;
     color: #e8e6e1;
-    font-family: 'Source Sans 3', sans-serif;
-    font-weight: 300;
+    font-family: 'Righteous', sans-serif;
+    font-weight: 400;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    background: rgba(18, 18, 24, 0.94);
+    border: 1px solid rgba(232, 184, 75, 0.12);
+    border-radius: 28px;
+    box-shadow: 0 26px 82px rgba(0, 0, 0, 0.28), inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(18px);
+    padding: 28px 26px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  }
+  .card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(232, 184, 75, 0.25);
+    box-shadow: 0 32px 110px rgba(0, 0, 0, 0.34), inset 0 0 0 1px rgba(255, 255, 255, 0.06);
   }
 
   .banner {
@@ -41,9 +63,10 @@
   }
 
   .back-link {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Righteous', sans-serif;
     font-size: 12px;
     font-weight: 400;
+00;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: #444;
@@ -60,16 +83,16 @@
     gap: 16px;
   }
   .hero-eyebrow {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Righteous', sans-serif;
     font-size: 10px;
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: #484850;
   }
   .hero-title {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Righteous', sans-serif;
     font-size: 32px;
-    font-weight: 300;
+    font-weight: 400;
     color: #e8e6e1;
     letter-spacing: -0.02em;
     line-height: 1.2;
@@ -100,9 +123,9 @@
     gap: 4px;
   }
   .stat-number {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Righteous', sans-serif;
     font-size: 26px;
-    font-weight: 300;
+    font-weight: 400;
     color: #e8b84b;
     letter-spacing: -0.02em;
   }
@@ -116,7 +139,7 @@
   .section { display: flex; flex-direction: column; gap: 16px; }
 
   .section-heading {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Righteous', sans-serif;
     font-size: 10px;
     letter-spacing: 0.14em;
     text-transform: uppercase;
@@ -150,7 +173,7 @@
   }
   .timeline-item:last-child { border-bottom: none; }
   .timeline-year {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Righteous', sans-serif;
     font-size: 12px;
     font-weight: 500;
     color: #e8b84b;
@@ -191,39 +214,43 @@
 
   <a class="back-link" href="https://lumanesence.co.uk">← lumanesence</a>
 
-  <div class="hero">
+  <div class="card">
+    <div class="hero">
 <h1> IMPORTANT: The outage has been extended </h1>
 <p>Due to the fact that I am going on hoiday between June 5th and 8th 2026, and the fact that I need to sleep a lot for that day since I also need to take a GCSE exam before I go to my holidayplace, I have been left with no other choice but to extend this outage to June 10th 2026, as wasting my health to restore a website is not worth it in the slightest. Sorry for the inconvenience</p>
 <hr />
-    <p class="hero-eyebrow">rec room · 2016 – 2026</p>
-    <h1 class="hero-title">why i'm going dark.</h1>
-    <p class="hero-sub">
-      on june 1st 2026 at noon pacific time, rec room shuts down for good. i've been playing it,
-      on and off, since 2020 — and even if i wasn't on it every single day, it was always just... <em>there</em>.
-      a place to exist in. so i wanted to mark that.
-    </p>
-  </div>
-
-  <div class="stats-grid">
-    <div class="stat-cell">
-      <span class="stat-number">150M+</span>
-      <span class="stat-label">players ever</span>
-    </div>
-    <div class="stat-cell">
-      <span class="stat-number">68,000</span>
-      <span class="stat-label">years spent in-game</span>
-    </div>
-    <div class="stat-cell">
-      <span class="stat-number">500M+</span>
-      <span class="stat-label">friendships made</span>
-    </div>
-    <div class="stat-cell">
-      <span class="stat-number">10</span>
-      <span class="stat-label">years running</span>
+      <p class="hero-eyebrow">rec room · 2016 – 2026</p>
+      <h1 class="hero-title">why i'm going dark.</h1>
+      <p class="hero-sub">
+        on june 1st 2026 at noon pacific time, rec room shuts down for good. i've been playing it,
+        on and off, since 2020 — and even if i wasn't on it every single day, it was always just... <em>there</em>.
+        a place to exist in. so i wanted to mark that.
+      </p>
     </div>
   </div>
 
-  <div class="section">
+  <div class="card">
+    <div class="stats-grid">
+      <div class="stat-cell">
+        <span class="stat-number">150M+</span>
+        <span class="stat-label">players ever</span>
+      </div>
+      <div class="stat-cell">
+        <span class="stat-number">68,000</span>
+        <span class="stat-label">years spent in-game</span>
+      </div>
+      <div class="stat-cell">
+        <span class="stat-number">500M+</span>
+        <span class="stat-label">friendships made</span>
+      </div>
+      <div class="stat-cell">
+        <span class="stat-number">10</span>
+        <span class="stat-label">years running</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section card">
     <p class="section-heading">what was rec room?</p>
     <p class="prose">
       rec room launched in 2016 as one of the earliest social VR platforms — a place where you could hang out,
@@ -238,7 +265,7 @@
     </p>
   </div>
 
-  <div class="section">
+  <div class="section card">
     <p class="section-heading">my time in it</p>
     <p class="prose">
       i picked it up in 2020. we all know what 2020 was like. having a virtual space to just exist in —
@@ -251,7 +278,7 @@
     </p>
   </div>
 
-  <div class="section">
+  <div class="section card">
     <p class="section-heading">how it ended</p>
     <p class="prose">
       rec room never figured out how to turn 150 million players into a sustainable business. costs outran
@@ -265,7 +292,7 @@
     </p>
   </div>
 
-  <div class="section">
+  <div class="section card">
     <p class="section-heading">a rough timeline</p>
     <div class="timeline">
       <div class="timeline-item">
@@ -299,7 +326,7 @@
     </div>
   </div>
 
-  <div class="section">
+  <div class="section card">
     <p class="section-heading">why go dark?</p>
     <p class="prose">
       i'm not doing this because i was a die-hard rec room player. i'm doing it because i think it matters
