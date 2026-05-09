@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lumanesence</title>
+<title>Lumanesence [[ IN-PUBLIC TEST BUILD ]]</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&family=Source+Sans+3:wght@300;400&display=swap" rel="stylesheet">
 <style>
@@ -24,7 +24,7 @@
 
   main {
     width: 100%;
-    max-width: 560px;
+    max-width: 1120px;
     padding: 64px 24px 80px;
     display: flex;
     flex-direction: column;
@@ -34,17 +34,74 @@
 
   .card {
     width: 100%;
-    background: rgba(18, 18, 24, 0.92);
-    border: 1px solid rgba(232, 184, 75, 0.10);
+    background: rgba(18, 18, 24, 0.94);
+    border: 1px solid rgba(232, 184, 75, 0.12);
     border-radius: 28px;
-    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28), inset 0 0 0 1px rgba(255, 255, 255, 0.03);
+    box-shadow: 0 26px 82px rgba(0, 0, 0, 0.28), inset 0 0 0 1px rgba(255, 255, 255, 0.04);
     backdrop-filter: blur(18px);
     padding: 28px 26px;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   }
   .card:hover {
     transform: translateY(-2px);
-    box-shadow: 0 30px 90px rgba(0, 0, 0, 0.36), inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+    border-color: rgba(232, 184, 75, 0.25);
+    box-shadow: 0 32px 110px rgba(0, 0, 0, 0.34), inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+  }
+
+  .split-layout {
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(280px, 360px) minmax(320px, 1fr);
+    gap: 32px;
+    align-items: flex-start;
+  }
+
+  .hero-column {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .hero-card {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .panels-column {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-height: calc(100vh - 180px);
+    overflow-y: auto;
+    padding-right: 2px;
+  }
+
+  .panels-column::-webkit-scrollbar {
+    width: 8px;
+  }
+  .panels-column::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .panels-column::-webkit-scrollbar-thumb {
+    background: rgba(232, 184, 75, 0.18);
+    border-radius: 999px;
+  }
+
+  @media (max-width: 860px) {
+    main {
+      padding: 40px 18px 60px;
+    }
+    .split-layout {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+    .panels-column {
+      max-height: none;
+      overflow: visible;
+      padding-right: 0;
+    }
   }
 
   .banner {
@@ -134,12 +191,6 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
-    padding: 18px 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.04);
-  }
-  .section:first-of-type {
-    border-top: none;
-    padding-top: 12px;
   }
   .section-label {
     font-size: 10px;
@@ -283,77 +334,79 @@
   </div>
 </div>
 
-  <div class="logo-block card">
-    <img src="https://lumanesence.co.uk/text.png" alt="Lumanesence" />
-  </div>
+  <div class="split-layout">
+    <div class="hero-column">
+      <div class="hero-card card">
+        <div class="logo-block">
+          <img src="https://lumanesence.co.uk/text.png" alt="Lumanesence" />
+        </div>
 
-  <div class="divider"></div>
+        <div class="bio-block">
+          <p class="bio-greeting">hello, i'm thomas —<br>but please call me <span>luma</span> :)</p>
+          <p class="bio-body">
+            i'm a <strong>bus spotter</strong> and <strong>ai music enthusiast</strong> from <strong>greenhithe village, england</strong>
+            that likes i-win a bit too much... i study <strong>level 1 information technology</strong> at london south east colleges,
+            and make stupid websites in my free time. i also make some pretty odd sora videos with netamitv and others :)
+          </p>
+          <div class="tags">
+            <span class="tag">bus spotter</span>
+            <span class="tag">musician</span>
+            <span class="tag">web dev</span>
+            <span class="tag">greenhithe</span>
+            <span class="tag">sora videos</span>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  <div class="bio-block card">
-    <p class="bio-greeting">hello, i'm thomas —<br>but please call me <span>luma</span> :)</p>
-    <p class="bio-body">
-      i'm a <strong>bus spotter</strong> and <strong>ai music enthusiast</strong> from <strong>greenhithe village, england</strong>
-      that likes i-win a bit too much... i study <strong>level 1 information technology</strong> at london south east colleges,
-      and make stupid websites in my free time. i also make some pretty odd sora videos with netamitv and others :)
-    </p>
-    <div class="tags">
-      <span class="tag">bus spotter</span>
-      <span class="tag">musician</span>
-      <span class="tag">web dev</span>
-      <span class="tag">greenhithe</span>
-      <span class="tag">sora videos</span>
+    <div class="panels-column">
+      <div class="section card">
+        <p class="section-label">site links</p>
+        <a class="link-row" href="https://ai.lumanesence.co.uk">
+          <span class="link-dot"></span>#fuckaimusiclicensing<span class="link-arrow">→</span>
+        </a>
+        <a class="link-row" href="https://refusaldon.lumanesence.co.uk">
+          <span class="link-dot"></span>refusaldon<span class="link-arrow">→</span>
+        </a>
+      </div>
+
+      <div class="section card">
+        <p class="section-label">telegram channels</p>
+        <a class="link-row" href="https://t.me/OOCTechTok">
+          <span class="link-dot"></span>out-of-context techtok community<span class="link-arrow">→</span>
+        </a>
+        <a class="link-row" href="https://t.me/StarlightIsland">
+          <span class="link-dot"></span>starlight island<span class="link-arrow">→</span>
+        </a>
+      </div>
+
+      <div class="section card">
+        <p class="section-label">socials</p>
+        <a class="link-row" href="https://beta.once.app/u/33bc5e86-713f-433b-92b0-b5112b45df56">
+          <span class="link-dot"></span>once.app<span class="link-arrow">→</span>
+        </a>
+        <a class="link-row" href="https://mstdn.ralseihub.ynh.fr/@thomas">
+          <span class="link-dot"></span>mastodon<span class="link-arrow">→</span>
+        </a>
+        <a class="link-row" href="https://instagram.com/lumanesence">
+          <span class="link-dot"></span>instagram<span class="link-arrow">→</span>
+        </a>
+        <a class="link-row" href="https://youtube.co.uk/@lumanesence">
+          <span class="link-dot"></span>youtube<span class="link-arrow">→</span>
+        </a>
+        <a class="link-link link-row" href="https://github.com/lumanesence">
+          <span class="link-dot"></span>github<span class="link-arrow">→</span>
+        </a>
+      </div>
+
+      <div class="section card">
+        <p class="section-label">contact</p>
+        <a class="link-row" href="mailto:luma@lumanesence.co.uk">
+          <span class="link-dot"></span>luma@lumanesence.co.uk<span class="link-arrow">→</span>
+        </a>
+      </div>
     </div>
   </div>
-
-  <div class="divider"></div>
-
-  <div class="section card">
-    <p class="section-label">site links</p>
-    <a class="link-row" href="https://ai.lumanesence.co.uk">
-      <span class="link-dot"></span>#fuckaimusiclicensing<span class="link-arrow">→</span>
-    </a>
-    <a class="link-row" href="https://refusaldon.lumanesence.co.uk">
-      <span class="link-dot"></span>refusaldon<span class="link-arrow">→</span>
-    </a>
-  </div>
-
- <div class="section card">
-    <p class="section-label">telegram channels</p>
-    <a class="link-row" href="https://t.me/OOCTechTok">
-      <span class="link-dot"></span>out-of-context techtok community<span class="link-arrow">→</span>
-    </a>
-    <a class="link-row" href="https://t.me/StarlightIsland">
-      <span class="link-dot"></span>starlight island<span class="link-arrow">→</span>
-    </a>
-
-</div>
-
-  <div class="section card">
-    <p class="section-label">socials</p>
-    <a class="link-row" href="https://beta.once.app/u/33bc5e86-713f-433b-92b0-b5112b45df56">
-      <span class="link-dot"></span>once.app<span class="link-arrow">→</span>
-    </a>
-    <a class="link-row" href="https://mstdn.ralseihub.ynh.fr/@thomas">
-      <span class="link-dot"></span>mastodon<span class="link-arrow">→</span>
-    </a>
-    <a class="link-row" href="https://instagram.com/lumanesence">
-      <span class="link-dot"></span>instagram<span class="link-arrow">→</span>
-    </a>
-    <a class="link-row" href="https://youtube.co.uk/@lumanesence">
-      <span class="link-dot"></span>youtube<span class="link-arrow">→</span>
-    </a>
-    <a class="link-link link-row" href="https://github.com/lumanesence">
-      <span class="link-dot"></span>github<span class="link-arrow">→</span>
-    </a>
-  </div>
-
-  <div class="section card">
-    <p class="section-label">contact</p>
-    <a class="link-row" href="mailto:luma@lumanesence.co.uk">
-      <span class="link-dot"></span>luma@lumanesence.co.uk<span class="link-arrow">→</span>
-    </a>
-  </div>
-
 </main>
 
 <footer>
