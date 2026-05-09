@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lumanesence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&family=Source+Sans+3:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #0c0c0e;
+    color: #e8e6e1;
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 300;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .banner {
+    width: 100%;
+    background: #1a1207;
+    border-bottom: 1px solid #3a2a0a;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 13px;
+    color: #c9971c;
+    letter-spacing: 0.02em;
+  }
+  .banner a {
+    color: #e8b84b;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(232,184,75,0.4);
+    padding-bottom: 1px;
+    transition: border-color 0.2s;
+  }
+  .banner a:hover { border-color: #e8b84b; }
+
+  .banner-red {
+    width: 100%;
+    background: #1a0807;
+    border-bottom: 1px solid #3d1311;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 13px;
+    color: #c9971c;
+    letter-spacing: 0.02em;
+  }
+  .banner-red a {
+    color: #a8312a;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(232,184,75,0.4);
+    padding-bottom: 1px;
+    transition: border-color 0.2s;
+  }
+  .banner a:hover { border-color: #e8b84b; }
+
+
+  main {
+    width: 100%;
+    max-width: 520px;
+    padding: 64px 24px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .logo-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+  .logo-block img {
+    max-width: 280px;
+    width: 100%;
+    opacity: 0.95;
+  }
+
+  .divider {
+    width: 32px;
+    height: 1px;
+    background: #2e2e35;
+    align-self: center;
+  }
+
+  /* Bio */
+  .bio-block {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .bio-greeting {
+    font-size: 20px;
+    font-weight: 300;
+    color: #e8e6e1;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+  }
+  .bio-greeting span { color: #e8b84b; }
+  .bio-body {
+    font-size: 15px;
+    color: #888;
+    line-height: 1.8;
+    font-weight: 300;
+  }
+  .bio-body strong {
+    color: #b0aead;
+    font-weight: 400;
+  }
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 4px;
+  }
+  .tag {
+    font-family: 'Raleway', sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #555;
+    border: 1px solid #222;
+    padding: 5px 12px;
+    border-radius: 2px;
+  }
+
+  /* Sections */
+  .section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .section-label {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #484850;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+  .link-row {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #19191f;
+    text-decoration: none;
+    color: #c8c6c0;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: 0.01em;
+    transition: color 0.2s;
+    gap: 10px;
+  }
+  .link-row:last-child { border-bottom: none; }
+  .link-row:hover { color: #fff; }
+  .link-row:hover .link-arrow { opacity: 1; transform: translateX(2px); }
+  .link-arrow {
+    margin-left: auto;
+    font-size: 12px;
+    opacity: 0;
+    color: #666;
+    transition: opacity 0.2s, transform 0.2s;
+  }
+  .link-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #333;
+    flex-shrink: 0;
+  }
+
+  footer {
+    margin-top: auto;
+    padding: 24px;
+    font-size: 12px;
+    color: #333;
+    letter-spacing: 0.04em;
+  }
+</style>
+
+
+<style>
+  .status-corner {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    z-index: 9999;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    max-width: 340px;
+    padding: 12px 14px;
+    border-radius: 14px;
+    background: rgba(20, 20, 24, 0.94);
+    color: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
+    backdrop-filter: blur(10px);
+    font: 14px/1.35 system-ui, -apple-system, blinkmacsystemfont, "segoe ui", sans-serif;
+  }
+
+  .status-corner .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 999px;
+    background: #ff4d4f;
+    box-shadow: 0 0 0 6px rgba(255, 77, 79, 0.14);
+    flex: 0 0 auto;
+    margin-top: 4px;
+  }
+
+  .status-corner .title {
+    font-weight: 700;
+    text-transform: lowercase;
+    letter-spacing: 0.02em;
+  }
+
+  .status-corner .text {
+    opacity: 0.9;
+    margin-top: 2px;
+    word-break: break-word;
+  }
+
+  .status-corner .small {
+    opacity: 0.7;
+    margin-top: 4px;
+    font-size: 12px;
+    word-break: break-word;
+  }
+
+  .hidden {
+    display: none;
+  }
+</style>
+
+</head>
+<body>
+
+
+
+<div class="banner">
+  <span>⚠</span>
+  This site will go dark <strong>June 1–10, 2026</strong> in recognition of Rec Room's shutdown.
+  <a href="https://lumanesence.co.uk/recroom.html">Learn more</a>
+</div>
+
+<div class="banner">
+  <span>⚠</span>
+  <strong>This website is undergoing a rework, so not everything matches the same uniform style just yet! </strong>
+</div>
+
+
+
+<main>
+
+  <div class="banner-red">
+  <span>⚠</span>
+<strong>THIS IS THE IN-PUBLIC TEST BUILD OF MY SITE!</strong>
+<p>Please note that this is a test build and may contain incomplete or unpolished elements.</p>
+</div>
+<div id="status-corner" class="status-corner hidden">
+  <div class="dot"></div>
+  <div class="body">
+    <div class="title" id="status-title">service issue</div>
+    <div class="text" id="status-text">checking status...</div>
+    <div class="small" id="status-meta"></div>
+  </div>
+</div>
+
+  <div class="logo-block">
+    <img src="https://lumanesence.co.uk/text.png" alt="Lumanesence" />
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="bio-block">
+    <p class="bio-greeting">hello, i'm thomas —<br>but please call me <span>luma</span> :)</p>
+    <p class="bio-body">
+      i'm a <strong>bus spotter</strong> and <strong>ai music enthusiast</strong> from <strong>greenhithe village, england</strong>
+      that likes i-win a bit too much... i study <strong>level 1 information technology</strong> at london south east colleges,
+      and make stupid websites in my free time. i also make some pretty odd sora videos with netamitv and others :)
+    </p>
+    <div class="tags">
+      <span class="tag">bus spotter</span>
+      <span class="tag">musician</span>
+      <span class="tag">web dev</span>
+      <span class="tag">greenhithe</span>
+      <span class="tag">sora videos</span>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section">
+    <p class="section-label">site links</p>
+    <a class="link-row" href="https://ai.lumanesence.co.uk">
+      <span class="link-dot"></span>#fuckaimusiclicensing<span class="link-arrow">→</span>
+    </a>
+    <a class="link-row" href="https://refusaldon.lumanesence.co.uk">
+      <span class="link-dot"></span>refusaldon<span class="link-arrow">→</span>
+    </a>
+  </div>
+
+ <div class="section">
+    <p class="section-label">telegram channels</p>
+    <a class="link-row" href="https://t.me/OOCTechTok">
+      <span class="link-dot"></span>out-of-context techtok community<span class="link-arrow">→</span>
+    </a>
+    <a class="link-row" href="https://t.me/StarlightIsland">
+      <span class="link-dot"></span>starlight island<span class="link-arrow">→</span>
+    </a>
+
+</div>
+
+  <div class="section">
+    <p class="section-label">socials</p>
+    <a class="link-row" href="https://beta.once.app/u/33bc5e86-713f-433b-92b0-b5112b45df56">
+      <span class="link-dot"></span>once.app<span class="link-arrow">→</span>
+    </a>
+    <a class="link-row" href="https://mstdn.ralseihub.ynh.fr/@thomas">
+      <span class="link-dot"></span>mastodon<span class="link-arrow">→</span>
+    </a>
+    <a class="link-row" href="https://instagram.com/lumanesence">
+      <span class="link-dot"></span>instagram<span class="link-arrow">→</span>
+    </a>
+    <a class="link-row" href="https://youtube.co.uk/@lumanesence">
+      <span class="link-dot"></span>youtube<span class="link-arrow">→</span>
+    </a>
+    <a class="link-link link-row" href="https://github.com/lumanesence">
+      <span class="link-dot"></span>github<span class="link-arrow">→</span>
+    </a>
+  </div>
+
+  <div class="section">
+    <p class="section-label">contact</p>
+    <a class="link-row" href="mailto:luma@lumanesence.co.uk">
+      <span class="link-dot"></span>luma@lumanesence.co.uk<span class="link-arrow">→</span>
+    </a>
+  </div>
+
+</main>
+
+<footer>
+  <center>
+  <p>Copyright 2026 Lumanesence Studios, a division of the OneLyte Association</p>
+  <p>This website was originally coded by Lumanesence with a rework done by Anthropic Claude</p>
+  <p>Lumanesence is a social alias of Thomas Derrick Ralseimai Hall</p>
+  </center>
+
+<script>
+  (async () => {
+    const card = document.getElementById("status-corner");
+    const titleEl = document.getElementById("status-title");
+    const textEl = document.getElementById("status-text");
+    const metaEl = document.getElementById("status-meta");
+
+    const endpoint = "https://status.lumanesence.co.uk/index.json";
+
+    const safeTime = (iso) => {
+      if (!iso) return "";
+      try {
+        return new Date(iso).toLocaleString();
+      } catch {
+        return "";
+      }
+    };
+
+    const pickLatestUpdate = (included, updateRefs) => {
+      const updates = (updateRefs || [])
+        .map(ref => included.find(item => item.type === "status_update" && item.id === ref.id))
+        .filter(Boolean);
+
+      if (!updates.length) return null;
+
+      return updates.sort((a, b) => {
+        const at = new Date(a?.attributes?.published_at || 0).getTime();
+        const bt = new Date(b?.attributes?.published_at || 0).getTime();
+        return bt - at;
+      })[0];
+    };
+
+    try {
+      const res = await fetch(endpoint, { cache: "no-store" });
+      if (!res.ok) throw new Error("bad response");
+
+      const json = await res.json();
+
+      const root = json?.data || {};
+      const attrs = root?.attributes || {};
+      const included = Array.isArray(json?.included) ? json.included : [];
+
+      const resources = included.filter(item => item.type === "status_page_resource");
+      const reports = included.filter(item => item.type === "status_report");
+
+      const state = (attrs.aggregate_state || "unknown").toLowerCase();
+      const activeReports = reports.filter(r => {
+        const endsAt = r?.attributes?.ends_at;
+        return !endsAt || state !== "operational";
+      });
+
+      if (state === "operational" && activeReports.length === 0) {
+        card.classList.add("hidden");
+        return;
+      }
+
+      const report = activeReports.sort((a, b) => {
+        const at = new Date(a?.attributes?.starts_at || 0).getTime();
+        const bt = new Date(b?.attributes?.starts_at || 0).getTime();
+        return bt - at;
+      })[0] || reports[0];
+
+      const reportTitle =
+        report?.attributes?.title ||
+        (state === "maintenance" ? "maintenance in progress" : "service issue");
+
+      const affected = (report?.attributes?.affected_resources || [])
+        .map(item => {
+          const match = resources.find(r => String(r.id) === String(item.status_page_resource_id));
+          return match?.attributes?.public_name || match?.attributes?.explanation || null;
+        })
+        .filter(Boolean);
+
+      const latestUpdate = pickLatestUpdate(
+        included,
+        report?.relationships?.status_updates?.data
+      );
+
+      const updateMessage =
+        latestUpdate?.attributes?.message ||
+        attrs.announcement ||
+        "no update message yet.";
+
+      titleEl.textContent = reportTitle;
+      textEl.textContent = updateMessage;
+
+      const parts = [];
+      if (affected.length) parts.push(`down: ${affected.join(", ")}`);
+      if (latestUpdate?.attributes?.published_at) {
+        parts.push(`latest: ${safeTime(latestUpdate.attributes.published_at)}`);
+      }
+
+      metaEl.textContent = parts.join(" � ");
+      card.classList.remove("hidden");
+    } catch (err) {
+      card.classList.remove("hidden");
+      titleEl.textContent = "status unavailable";
+      textEl.textContent = "couldn�t load better stack right now.";
+      metaEl.textContent = "";
+    }
+  })();
+</script>
+
+
+</footer>
+
+</body>
+</html>

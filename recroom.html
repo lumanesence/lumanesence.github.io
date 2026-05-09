@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>why i'm going dark — lumanesence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&family=Source+Sans+3:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #0c0c0e;
+    color: #e8e6e1;
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 300;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .banner {
+    width: 100%;
+    background: #1a1207;
+    border-bottom: 1px solid #3a2a0a;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 13px;
+    color: #c9971c;
+    letter-spacing: 0.02em;
+  }
+
+  main {
+    width: 100%;
+    max-width: 560px;
+    padding: 56px 24px 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  .back-link {
+    font-family: 'Raleway', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #444;
+    text-decoration: none;
+    transition: color 0.2s;
+    align-self: flex-start;
+  }
+  .back-link:hover { color: #e8e6e1; }
+
+  /* Hero */
+  .hero {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .hero-eyebrow {
+    font-family: 'Raleway', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #484850;
+  }
+  .hero-title {
+    font-family: 'Raleway', sans-serif;
+    font-size: 32px;
+    font-weight: 300;
+    color: #e8e6e1;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+  .hero-sub {
+    font-size: 15px;
+    color: #777;
+    line-height: 1.8;
+    max-width: 460px;
+  }
+  .hero-sub em { color: #a0a0a0; font-style: italic; }
+
+  /* Stats grid */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: #1a1a1f;
+    border: 1px solid #1a1a1f;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .stat-cell {
+    background: #0c0c0e;
+    padding: 20px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .stat-number {
+    font-family: 'Raleway', sans-serif;
+    font-size: 26px;
+    font-weight: 300;
+    color: #e8b84b;
+    letter-spacing: -0.02em;
+  }
+  .stat-label {
+    font-size: 12px;
+    color: #555;
+    letter-spacing: 0.02em;
+  }
+
+  /* Sections */
+  .section { display: flex; flex-direction: column; gap: 16px; }
+
+  .section-heading {
+    font-family: 'Raleway', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #484850;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #19191f;
+  }
+
+  .prose {
+    font-size: 15px;
+    color: #888;
+    line-height: 1.85;
+    font-weight: 300;
+  }
+  .prose strong { color: #b0aead; font-weight: 400; }
+  .prose em { color: #a0a0a0; font-style: italic; }
+
+  /* Timeline */
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .timeline-item {
+    display: grid;
+    grid-template-columns: 72px 1fr;
+    gap: 16px;
+    padding: 14px 0;
+    border-bottom: 1px solid #19191f;
+    align-items: start;
+  }
+  .timeline-item:last-child { border-bottom: none; }
+  .timeline-year {
+    font-family: 'Raleway', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: #e8b84b;
+    letter-spacing: 0.04em;
+    padding-top: 2px;
+  }
+  .timeline-text {
+    font-size: 14px;
+    color: #777;
+    line-height: 1.6;
+  }
+  .timeline-text strong { color: #a0a0a0; font-weight: 400; }
+
+  .divider {
+    width: 32px;
+    height: 1px;
+    background: #2e2e35;
+  }
+
+  footer {
+    padding: 24px;
+    font-size: 12px;
+    color: #333;
+    letter-spacing: 0.04em;
+    text-align: center;
+  }
+  footer a { color: #444; text-decoration: none; }
+  footer a:hover { color: #888; }
+</style>
+</head>
+<body>
+
+<div class="banner">
+  ⚠ this site will go dark <strong>june 1st – june 10th 2026</strong>
+</div>
+
+<main>
+
+  <a class="back-link" href="https://lumanesence.co.uk">← lumanesence</a>
+
+  <div class="hero">
+<h1> IMPORTANT: The outage has been extended </h1>
+<p>Due to the fact that I am going on hoiday between June 5th and 8th 2026, and the fact that I need to sleep a lot for that day since I also need to take a GCSE exam before I go to my holidayplace, I have been left with no other choice but to extend this outage to June 10th 2026, as wasting my health to restore a website is not worth it in the slightest. Sorry for the inconvenience</p>
+<hr />
+    <p class="hero-eyebrow">rec room · 2016 – 2026</p>
+    <h1 class="hero-title">why i'm going dark.</h1>
+    <p class="hero-sub">
+      on june 1st 2026 at noon pacific time, rec room shuts down for good. i've been playing it,
+      on and off, since 2020 — and even if i wasn't on it every single day, it was always just... <em>there</em>.
+      a place to exist in. so i wanted to mark that.
+    </p>
+  </div>
+
+  <div class="stats-grid">
+    <div class="stat-cell">
+      <span class="stat-number">150M+</span>
+      <span class="stat-label">players ever</span>
+    </div>
+    <div class="stat-cell">
+      <span class="stat-number">68,000</span>
+      <span class="stat-label">years spent in-game</span>
+    </div>
+    <div class="stat-cell">
+      <span class="stat-number">500M+</span>
+      <span class="stat-label">friendships made</span>
+    </div>
+    <div class="stat-cell">
+      <span class="stat-number">10</span>
+      <span class="stat-label">years running</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <p class="section-heading">what was rec room?</p>
+    <p class="prose">
+      rec room launched in 2016 as one of the earliest social VR platforms — a place where you could hang out,
+      play mini-games, build your own rooms, and just exist in virtual space with other people. it wasn't just
+      a game. it was a platform. a community. a weird little world where millions of people showed up and made
+      something together.
+    </p>
+    <p class="prose">
+      over its decade of life, it reached over <strong>150 million players</strong>. people made more than half
+      a billion friends on it. collectively, humanity spent <strong>68,000 years</strong> inside rec room.
+      that's not nothing. that's genuinely remarkable.
+    </p>
+  </div>
+
+  <div class="section">
+    <p class="section-heading">my time in it</p>
+    <p class="prose">
+      i picked it up in 2020. we all know what 2020 was like. having a virtual space to just exist in —
+      even a silly one with paintball and escape rooms — meant something. i came and went over the years,
+      but there was always a comfort in knowing it was still there if i wanted it.
+    </p>
+    <p class="prose">
+      it wasn't my main thing, but it was part of a bigger picture of what the internet felt like for a few
+      years. and now that's going away. permanently.
+    </p>
+  </div>
+
+  <div class="section">
+    <p class="section-heading">how it ended</p>
+    <p class="prose">
+      rec room never figured out how to turn 150 million players into a sustainable business. costs outran
+      revenue. they laid off <strong>16% of staff in march 2025</strong>, then cut roughly half the remaining
+      team in august. on march 30th 2026 — they announced the shutdown. june 1st. that's it.
+    </p>
+    <p class="prose">
+      their own words: <em>"despite this popularity, we never quite figured out how to make rec room a
+      sustainably profitable business."</em> which is one of the saddest sentences you can say about
+      something people genuinely loved.
+    </p>
+  </div>
+
+  <div class="section">
+    <p class="section-heading">a rough timeline</p>
+    <div class="timeline">
+      <div class="timeline-item">
+        <span class="timeline-year">2016</span>
+        <span class="timeline-text">rec room founded by nick fajt, cameron brown and others under the name <strong>against gravity</strong></span>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-year">2020</span>
+        <span class="timeline-text">pandemic-era boom. millions flock to virtual hangouts. <strong>luma joins</strong>, sporadically.</span>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-year">dec 2021</span>
+        <span class="timeline-text">series F values rec room at <strong>$3.5 billion</strong>. one of seattle's biggest unicorns.</span>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-year">mar 2025</span>
+        <span class="timeline-text">first round of layoffs — <strong>16% of staff</strong> cut.</span>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-year">aug 2025</span>
+        <span class="timeline-text">roughly <strong>half the remaining workforce</strong> let go. 141 positions eliminated.</span>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-year">30 mar 2026</span>
+        <span class="timeline-text">shutdown announced. new accounts, friend requests, and subscriptions immediately blocked.</span>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-year">1 jun 2026</span>
+        <span class="timeline-text">servers go dark at noon pacific. <strong>rec room ends.</strong></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <p class="section-heading">why go dark?</p>
+    <p class="prose">
+      i'm not doing this because i was a die-hard rec room player. i'm doing it because i think it matters
+      to acknowledge when something that was genuinely part of people's lives disappears. rec room was that
+      for a lot of people — kids, adults, people stuck at home in 2020, vr enthusiasts, creators who built
+      worlds inside it.
+    </p>
+    <p class="prose">
+      taking my site offline for four days feels like the right-sized gesture. a small, quiet acknowledgement.
+      not dramatic, just — respectful.
+    </p>
+    <p class="prose">it'll be back june 10th. :)</p>
+  </div>
+
+</main>
+
+<footer>© 2026 lumanesence · <a href="https://lumanesence.co.uk">lumanesence.co.uk</a></footer>
+
+</body>
+</html>

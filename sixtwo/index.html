@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>six two portal</title>
+<style>
+    body {
+        margin: 0;
+        background: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    button {
+        padding: 20px 40px;
+        font-size: 24px;
+        cursor: pointer;
+        border: none;
+        border-radius: 12px;
+        position: absolute;
+        z-index: 2;
+    }
+
+    video {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 100%;
+        max-height: 100%;
+        display: none;
+        background: black;
+    }
+</style>
+
+</head>
+<body>
+
+<button id="playBtn">click me</button>
+
+<video id="video" loop>
+    <source src="six two.mp4" type="video/mp4">
+</video>
+
+<script>
+const btn = document.getElementById("playBtn");
+const video = document.getElementById("video");
+
+btn.addEventListener("click", async () => {
+    video.style.display = "block";
+    btn.style.display = "none";
+    await video.play();
+
+    if (video.requestFullscreen) {
+        video.requestFullscreen();
+    } else if (video.webkitRequestFullscreen) {
+        video.webkitRequestFullscreen();
+    }
+});
+</script>
+
+</body>
+</html>
+
