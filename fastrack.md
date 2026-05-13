@@ -1,3 +1,11 @@
+> [!CAUTION]
+> # FASTRACK IS NOT GIVING ME MY MONEY BACK.
+> This situation has now reached a new low.
+>
+> I recieved a response from Fastrack's support team, claiming that they cannot issue a refund because I didn't have a valid payment card on me at the time. From Fastrack's support team: "I would not be able to consider any refunds for travel undertaken without a valid bus pass being presented to the driver."
+>
+> This response further proves my point that Fastrack does not give a fuck about you - they only care about money, and we can see that here again.
+
 # I want to sue Fastrack - Here's my case.
 
 ## Preface
