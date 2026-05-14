@@ -1,7 +1,7 @@
 # Fastrack - Faulty Payments and Money Hungry Drivers
 
 ## Preface
-Hello! If you don't know who I am, my name is Thomas Derrick Ralseimai Hall, though you might know me online as "Lumanesence", or the AI bus veg musician, or the ONCE for Insider guy... whatever you call me, this is who I really am. As stated in my profile README, I attend London South East Colleges Bexley, just below Erith Town Centre, as well as being the MD at [The OneLyte Association](https://github.com/OneLyteAssociation). 
+Hello! If you don't know who I am, my name is Thomas Derrick Ralseimai Hall, though you might know me online as "Lumanesence", or the AI bus veg musician, or the ONCE for Insider guy... whatever you call me, this is who I really am. This document is intended to provide my brutally honest experience with Fastrack Kent Thameside (operated by The Go-Ahead Group), and why I cannot support them financially anymore.
 
 > [!CAUTION]
 > I'm not making this to harass anyone at Fastrack or it's parent company, Go-Ahead, but I'm getting sick and tired of what I've had to endure over the past 24 months that I've been living in Greenhithe, and it has reached the point to where I can't suppoort or use the service properly anymore. Please do not harass any company or person mentioned in this document - it will just end in more bad than good.
