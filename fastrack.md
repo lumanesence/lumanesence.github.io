@@ -1,18 +1,10 @@
-> [!CAUTION]
-> # FASTRACK IS NOT GIVING ME MY MONEY BACK.
-> This situation has now reached a new low.
->
-> I recieved a response from Fastrack's support team, claiming that they cannot issue a refund because I didn't have a valid payment card on me at the time. From Fastrack's support team: "I would not be able to consider any refunds for travel undertaken without a valid bus pass being presented to the driver."
->
-> This response further proves my point that Fastrack does not give a fuck about you - they only care about money, and we can see that here again. I would also like to mention I will release the email threads I had with Fastrack, with immediate effect should they not issue a refund
-
-# I want to sue Fastrack - Here's my case.
+# Fastrack - Faulty Payments and Money Hungry Drivers
 
 ## Preface
 Hello! If you don't know who I am, my name is Thomas Derrick Ralseimai Hall, though you might know me online as "Lumanesence", or the AI bus veg musician, or the ONCE for Insider guy... whatever you call me, this is who I really am. As stated in my profile README, I attend London South East Colleges Bexley, just below Erith Town Centre, as well as being the MD at [The OneLyte Association](https://github.com/OneLyteAssociation). 
 
 > [!CAUTION]
-> I'm not making this to harass anyone at Fastrack or it's parent company, Go-Ahead, but I'm getting sick and tired of what I've had to endure over the past 24 months that I've been living in Greenhithe, and it has reached the point to where I can't suppoort or use the service properly anymore. Please no not harass any company or person mentioned in this document - it will just end in more bad than good.
+> I'm not making this to harass anyone at Fastrack or it's parent company, Go-Ahead, but I'm getting sick and tired of what I've had to endure over the past 24 months that I've been living in Greenhithe, and it has reached the point to where I can't suppoort or use the service properly anymore. Please do not harass any company or person mentioned in this document - it will just end in more bad than good.
 
 On that note however, let's begin.
 
